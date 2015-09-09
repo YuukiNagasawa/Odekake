@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface PlanListViewController : UIViewController<
+    UITableViewDelegate,UITableViewDataSource>
 
 
 @end

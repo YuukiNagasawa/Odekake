@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		2C8544371B9FFBC500D2DF2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544361B9FFBC500D2DF2C /* main.m */; };
 		2C85443A1B9FFBC500D2DF2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544391B9FFBC500D2DF2C /* AppDelegate.m */; };
-		2C85443D1B9FFBC500D2DF2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85443C1B9FFBC500D2DF2C /* ViewController.m */; };
+		2C85443D1B9FFBC500D2DF2C /* PlanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85443C1B9FFBC500D2DF2C /* PlanListViewController.m */; };
 		2C8544401B9FFBC500D2DF2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C85443E1B9FFBC500D2DF2C /* Main.storyboard */; };
 		2C8544421B9FFBC500D2DF2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8544411B9FFBC500D2DF2C /* Images.xcassets */; };
 		2C8544451B9FFBC500D2DF2C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8544431B9FFBC500D2DF2C /* LaunchScreen.xib */; };
 		2C8544511B9FFBC500D2DF2C /* OdekakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544501B9FFBC500D2DF2C /* OdekakeTests.m */; };
+		2C8544641BA0466C00D2DF2C /* PlanListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544631BA0466C00D2DF2C /* PlanListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		2C8544361B9FFBC500D2DF2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C8544381B9FFBC500D2DF2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C8544391B9FFBC500D2DF2C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2C85443B1B9FFBC500D2DF2C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2C85443C1B9FFBC500D2DF2C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2C85443B1B9FFBC500D2DF2C /* PlanListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanListViewController.h; sourceTree = "<group>"; };
+		2C85443C1B9FFBC500D2DF2C /* PlanListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanListViewController.m; sourceTree = "<group>"; };
 		2C85443F1B9FFBC500D2DF2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C8544411B9FFBC500D2DF2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C8544441B9FFBC500D2DF2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2C85444A1B9FFBC500D2DF2C /* OdekakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OdekakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C85444F1B9FFBC500D2DF2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8544501B9FFBC500D2DF2C /* OdekakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OdekakeTests.m; sourceTree = "<group>"; };
+		2C8544621BA0466C00D2DF2C /* PlanListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListTableViewCell.h; sourceTree = "<group>"; };
+		2C8544631BA0466C00D2DF2C /* PlanListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +84,11 @@
 		2C8544331B9FFBC500D2DF2C /* Odekake */ = {
 			isa = PBXGroup;
 			children = (
+				2C8544601BA0463D00D2DF2C /* Views */,
 				2C8544381B9FFBC500D2DF2C /* AppDelegate.h */,
 				2C8544391B9FFBC500D2DF2C /* AppDelegate.m */,
-				2C85443B1B9FFBC500D2DF2C /* ViewController.h */,
-				2C85443C1B9FFBC500D2DF2C /* ViewController.m */,
+				2C85443B1B9FFBC500D2DF2C /* PlanListViewController.h */,
+				2C85443C1B9FFBC500D2DF2C /* PlanListViewController.m */,
 				2C85443E1B9FFBC500D2DF2C /* Main.storyboard */,
 				2C8544411B9FFBC500D2DF2C /* Images.xcassets */,
 				2C8544431B9FFBC500D2DF2C /* LaunchScreen.xib */,
@@ -117,6 +121,23 @@
 				2C85444F1B9FFBC500D2DF2C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C8544601BA0463D00D2DF2C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C8544611BA0465100D2DF2C /* PlanList */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2C8544611BA0465100D2DF2C /* PlanList */ = {
+			isa = PBXGroup;
+			children = (
+				2C8544621BA0466C00D2DF2C /* PlanListTableViewCell.h */,
+				2C8544631BA0466C00D2DF2C /* PlanListTableViewCell.m */,
+			);
+			name = PlanList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C85443D1B9FFBC500D2DF2C /* ViewController.m in Sources */,
+				2C8544641BA0466C00D2DF2C /* PlanListTableViewCell.m in Sources */,
+				2C85443D1B9FFBC500D2DF2C /* PlanListViewController.m in Sources */,
 				2C85443A1B9FFBC500D2DF2C /* AppDelegate.m in Sources */,
 				2C8544371B9FFBC500D2DF2C /* main.m in Sources */,
 			);
@@ -418,6 +440,7 @@
 				2C8544561B9FFBC500D2DF2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C8544571B9FFBC500D2DF2C /* Build configuration list for PBXNativeTarget "OdekakeTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +449,7 @@
 				2C8544591B9FFBC500D2DF2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
