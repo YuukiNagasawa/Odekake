@@ -6,4 +6,13 @@
 //  Copyright (c) 2015年 長澤優希. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "SpotDetailViewController.h"
+
+@interface SpotDetailViewController ()
+
+@end
+
+@implementation SpotDetailViewController
+
+
+@end

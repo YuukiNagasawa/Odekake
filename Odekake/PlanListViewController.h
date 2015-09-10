@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SearchProtocol.h"
 
 @interface PlanListViewController : UIViewController<
-    UITableViewDelegate,UITableViewDataSource>
+    UITableViewDelegate,UITableViewDataSource,SearchProtocol>
 
 
 @end

@@ -9,6 +9,7 @@
 
 #import "PlanListViewController.h"
 #import "PlanListTableViewCell.h"
+#import "SearchViewController.h"
 
 @interface PlanListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -24,6 +25,8 @@
     _tableView.delegate=self;
     _tableView.dataSource=self;
     
+    
+    
     _planList = @[
                   @{@"name":@"楽しいプラン"},
                   @{@"name":@"悲しいプラン"},
@@ -36,6 +39,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if([segue.identifier isEqualToString:@"searchSegue"]){
+        SearchViewController * viewController =segue.destinationViewController;
+        
+        viewController.delegate=self;
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -58,6 +70,10 @@
     [self performSegueWithIdentifier:@"onSelectPlanSegue" sender:[_tableView cellForRowAtIndexPath:indexPath]];
 
 }
+-(void)searchFor:(NSString *)text{
+    NSLog(@"%@",text);
+    
+}
 
 - (IBAction)favoriteLsitBnt:(id)sender {
     
@@ -67,6 +83,11 @@
 - (IBAction)executionHistoryBnt:(id)sender {
     
     [self performSegueWithIdentifier:@"executionHistorySegue" sender:self];
+}
+
+- (IBAction)SearchBtn:(id)sender {
+    
+    [self performSegueWithIdentifier:@"searchSegue" sender:self];
 }
 
 @end

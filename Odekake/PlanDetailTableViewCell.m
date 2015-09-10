@@ -16,6 +16,8 @@
 @implementation PlanDetailTableViewCell
 
 
+
+
 @end
 
 

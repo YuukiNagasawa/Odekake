@@ -9,4 +9,9 @@
 #ifndef Odekake_SpotDeatilViewController_h
 #define Odekake_SpotDeatilViewController_h
 
+#import<UIkit/UIkit.h>
+
+@interface SpotDetailViewController: UIViewController
+
+@end
 #endif
