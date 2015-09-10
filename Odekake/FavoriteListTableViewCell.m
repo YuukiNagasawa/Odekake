@@ -18,5 +18,8 @@
 
 @implementation FavoriteListTableViewCell
 
+-(void)setData:(NSDictionary *)data{
+    _favoriteListLabel.text=data[@"name"];
+}
 
 @end

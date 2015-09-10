@@ -10,8 +10,20 @@
 #define Odekake_SpotDeatilViewController_h
 
 #import<UIkit/UIkit.h>
+#import<MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface SpotDetailViewController: UIViewController
+@interface SpotDetailViewController: UIViewController<MKAnnotation>{
+    MKPointAnnotation*annotation;
+}
+
+@property (weak, nonatomic) IBOutlet MKMapView *spotMapView;
+@property (readwrite, nonatomic) CLLocationCoordinate2D coordinate;
+
+//double latitude;
+//double longitude;
+
+-(void)setData:(NSDictionary*)data;
 
 @end
 #endif

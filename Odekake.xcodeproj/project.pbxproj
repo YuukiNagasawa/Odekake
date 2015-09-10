@@ -25,6 +25,7 @@
 		2C8544871BA13D7000D2DF2C /* ExecutionHistoryListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544861BA13D7000D2DF2C /* ExecutionHistoryListTableViewCell.m */; };
 		2C8544891BA1441300D2DF2C /* cat1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C8544881BA1441300D2DF2C /* cat1.jpg */; };
 		2C85448D1BA145C300D2DF2C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85448C1BA145C300D2DF2C /* SearchViewController.m */; };
+		2C8544901BA18F1900D2DF2C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C85448F1BA18F1900D2DF2C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		2C85448B1BA145AA00D2DF2C /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		2C85448C1BA145C300D2DF2C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		2C85448E1BA147AC00D2DF2C /* SearchProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchProtocol.h; sourceTree = "<group>"; };
+		2C85448F1BA18F1900D2DF2C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8544901BA18F1900D2DF2C /* CoreLocation.framework in Frameworks */,
 				2C8544741BA1148100D2DF2C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +102,7 @@
 				2C8544331B9FFBC500D2DF2C /* Odekake */,
 				2C85444D1B9FFBC500D2DF2C /* OdekakeTests */,
 				2C8544321B9FFBC500D2DF2C /* Products */,
+				2C85448F1BA18F1900D2DF2C /* CoreLocation.framework */,
 				2C8544731BA1148100D2DF2C /* MapKit.framework */,
 			);
 			sourceTree = "<group>";

@@ -12,6 +12,7 @@
 @interface FavoriteListViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property(nonatomic)NSArray*palnList;
 
 @end
 
@@ -24,16 +25,27 @@
     _tableview.delegate=self;
     _tableview.dataSource=self;
     
+    _palnList = @[
+                  @{@"name":@"面白いプラン"},
+                  @{@"name":@"うきうきプラン"},
+                  @{@"name":@"アクティブプラン"},
+                  @{@"name":@"悲しいプラン"},
+                  @{@"name":@"怖いプラン"},
+                  @{@"name":@"びっくりプラン"},
+                  @{@"name":@"すごいプラン"},
+                  ];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 5;
+    return [_palnList count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     FavoriteListTableViewCell * cell = [_tableview dequeueReusableCellWithIdentifier:@"FavoriteListTableViewCell" forIndexPath:indexPath];
+    
+    [cell setData:_palnList[indexPath.row]];
     
     return cell;
 }

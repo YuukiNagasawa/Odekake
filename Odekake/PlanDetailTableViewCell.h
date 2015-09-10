@@ -13,7 +13,8 @@
 
 @interface PlanDetailTableViewCell : UITableViewCell
 
-@end
+-(void)setData:(NSDictionary*)data;
 
+@end
 
 #endif

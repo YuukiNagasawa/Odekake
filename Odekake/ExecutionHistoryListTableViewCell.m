@@ -10,9 +10,17 @@
 
 @interface ExecutionHistoryListTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *ExecutionHistoryListLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLable;
 
 @end
 
 @implementation ExecutionHistoryListTableViewCell
+
+-(void)setData:(NSDictionary *)data{
+    _ExecutionHistoryListLabel.text= data[@"name"];
+    _dateLable.text=data[@"date"];
+    
+    
+}
 
 @end

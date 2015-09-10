@@ -11,6 +11,7 @@
 
 @interface ExecutionHistoryListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property(nonatomic)NSArray*planName;
 
 @end
 
@@ -22,17 +23,27 @@
     _tableview.delegate=self;
     _tableview.dataSource=self;
     
+    _planName=@[
+                @{@"date":@"2015.09.10",@"name":@"a"},
+                @{@"date":@"2015.09.10",@"name":@"a"},
+                @{@"date":@"2015.09.10",@"name":@"a"},
+                @{@"date":@"2015.09.10",@"name":@"a"},
+                @{@"date":@"2015.09.10",@"name":@"a"}
+                ];
+    
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 5;
+    return [_planName count];
     
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     ExecutionHistoryListTableViewCell * cell=[_tableview dequeueReusableCellWithIdentifier:@"ExecutionHistoryListTableViewCell" forIndexPath:indexPath];
+    
+    [cell setData:_planName[indexPath.row]];
     
     return cell;
     

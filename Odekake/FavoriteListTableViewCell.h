@@ -12,6 +12,9 @@
 #import <UIKit/UIKit.h>
 
 @interface FavoriteListTableViewCell: UITableViewCell
+
+-(void)setData:(NSDictionary*)data;
+
 @end
 
 #endif

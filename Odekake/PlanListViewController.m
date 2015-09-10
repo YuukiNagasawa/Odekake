@@ -28,8 +28,8 @@
     
     
     _planList = @[
-                  @{@"name":@"楽しいプラン"},
-                  @{@"name":@"悲しいプラン"},
+                  @{@"name":@"楽しいプラン",@"image_url":@"https://pbs.twimg.com/profile_images/378800000220029324/fe66faeca20115da8566e51d83447ead_400x400.jpeg"},
+                  @{@"name":@"悲しいプラン",@"image_url":@"http://nekogazou.com/wp-content/uploads/2013/07/0142.jpg"},
                   @{@"name":@"怖いプラン"},
                   @{@"name":@"つらいプラン"}
                   ];

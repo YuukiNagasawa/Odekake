@@ -13,6 +13,8 @@
 
 @interface ExecutionHistoryListTableViewCell:UITableViewCell
 
+-(void)setData:(NSDictionary*)data;
+
 @end
 
 #endif

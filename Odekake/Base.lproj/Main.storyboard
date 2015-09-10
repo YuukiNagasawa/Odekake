@@ -324,7 +324,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cgd-4P-dLk" id="mvD-9L-DN7">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W72-SJ-G3L">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W72-SJ-G3L">
                                                     <rect key="frame" x="170" y="18" width="415" height="60"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -368,6 +368,8 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="planDetailLabel" destination="W72-SJ-G3L" id="h62-AN-UaP"/>
+                                            <outlet property="spotImg" destination="Qhv-wC-c5l" id="qcB-az-KwE"/>
                                             <outlet property="spotNameImg" destination="Qhv-wC-c5l" id="6Ps-JC-Sbg"/>
                                         </connections>
                                     </tableViewCell>
@@ -441,22 +443,41 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BsB-fz-z8R" id="STI-4d-vTc">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="うううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううう" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocB-Rh-rfj">
-                                                    <rect key="frame" x="5" y="0.0" width="300" height="73"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="うううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううううう" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocB-Rh-rfj">
+                                                    <rect key="frame" x="175" y="18" width="410" height="45"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ubl-b6-Unt">
+                                                    <rect key="frame" x="10" y="18" width="150" height="39"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="GE8-cW-LPv"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ocB-Rh-rfj" firstAttribute="leading" secondItem="Ubl-b6-Unt" secondAttribute="trailing" constant="15" id="1aQ-Rj-RJY"/>
                                                 <constraint firstAttribute="trailing" secondItem="ocB-Rh-rfj" secondAttribute="trailing" constant="5" id="6Ny-1r-BIo"/>
                                                 <constraint firstItem="ocB-Rh-rfj" firstAttribute="leading" secondItem="STI-4d-vTc" secondAttribute="leading" constant="5" id="FW9-19-z25"/>
+                                                <constraint firstItem="Ubl-b6-Unt" firstAttribute="top" secondItem="STI-4d-vTc" secondAttribute="topMargin" constant="10" id="GTz-8o-R35"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ocB-Rh-rfj" secondAttribute="bottom" constant="10" id="bON-4D-MAH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ubl-b6-Unt" secondAttribute="bottom" constant="16" id="cn2-N5-iTi"/>
                                                 <constraint firstItem="ocB-Rh-rfj" firstAttribute="top" secondItem="STI-4d-vTc" secondAttribute="topMargin" constant="10" id="kTc-Db-Tpf"/>
+                                                <constraint firstItem="Ubl-b6-Unt" firstAttribute="leading" secondItem="STI-4d-vTc" secondAttribute="leading" constant="10" id="x1B-Mv-aiL"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="FW9-19-z25"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="ExecutionHistoryListLabel" destination="ocB-Rh-rfj" id="tSk-UT-kLK"/>
+                                            <outlet property="dateLable" destination="Ubl-b6-Unt" id="oMj-xh-Pvk"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -538,6 +559,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="spotCommentTextView" destination="k9H-Vp-WU9" id="JcL-ST-faO"/>
+                        <outlet property="spotImg" destination="q12-34-xgd" id="o0e-9N-Bxo"/>
+                        <outlet property="spotMapView" destination="6Jp-f7-RCl" id="nnv-aX-IEF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCo-SX-OtV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
