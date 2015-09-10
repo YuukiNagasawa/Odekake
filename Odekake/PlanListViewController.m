@@ -58,4 +58,15 @@
     [self performSegueWithIdentifier:@"onSelectPlanSegue" sender:[_tableView cellForRowAtIndexPath:indexPath]];
 
 }
+
+- (IBAction)favoriteLsitBnt:(id)sender {
+    
+    [self performSegueWithIdentifier:@"favoriteListSegue" sender:self];
+}
+
+- (IBAction)executionHistoryBnt:(id)sender {
+    
+    [self performSegueWithIdentifier:@"executionHistorySegue" sender:self];
+}
+
 @end

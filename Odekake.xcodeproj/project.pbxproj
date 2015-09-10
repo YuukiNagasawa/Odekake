@@ -15,6 +15,10 @@
 		2C8544451B9FFBC500D2DF2C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8544431B9FFBC500D2DF2C /* LaunchScreen.xib */; };
 		2C8544511B9FFBC500D2DF2C /* OdekakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544501B9FFBC500D2DF2C /* OdekakeTests.m */; };
 		2C8544641BA0466C00D2DF2C /* PlanListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544631BA0466C00D2DF2C /* PlanListTableViewCell.m */; };
+		2C85446D1BA04FEA00D2DF2C /* PlanDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85446C1BA04FEA00D2DF2C /* PlanDetailViewController.m */; };
+		2C8544721BA052A200D2DF2C /* PlanDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544711BA052A200D2DF2C /* PlanDetailTableViewCell.m */; };
+		2C8544741BA1148100D2DF2C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8544731BA1148100D2DF2C /* MapKit.framework */; };
+		2C8544771BA1157100D2DF2C /* SpotDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544761BA1157100D2DF2C /* SpotDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,13 @@
 		2C8544501B9FFBC500D2DF2C /* OdekakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OdekakeTests.m; sourceTree = "<group>"; };
 		2C8544621BA0466C00D2DF2C /* PlanListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanListTableViewCell.h; sourceTree = "<group>"; };
 		2C8544631BA0466C00D2DF2C /* PlanListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListTableViewCell.m; sourceTree = "<group>"; };
+		2C85446C1BA04FEA00D2DF2C /* PlanDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanDetailViewController.m; sourceTree = "<group>"; };
+		2C85446E1BA0501600D2DF2C /* PlanDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanDetailViewController.h; sourceTree = "<group>"; };
+		2C8544701BA0528100D2DF2C /* PlanDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanDetailTableViewCell.h; sourceTree = "<group>"; };
+		2C8544711BA052A200D2DF2C /* PlanDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanDetailTableViewCell.m; sourceTree = "<group>"; };
+		2C8544731BA1148100D2DF2C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2C8544751BA1153800D2DF2C /* SpotDeatilViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotDeatilViewController.h; sourceTree = "<group>"; };
+		2C8544761BA1157100D2DF2C /* SpotDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8544741BA1148100D2DF2C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +81,7 @@
 				2C8544331B9FFBC500D2DF2C /* Odekake */,
 				2C85444D1B9FFBC500D2DF2C /* OdekakeTests */,
 				2C8544321B9FFBC500D2DF2C /* Products */,
+				2C8544731BA1148100D2DF2C /* MapKit.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,8 +100,6 @@
 				2C8544601BA0463D00D2DF2C /* Views */,
 				2C8544381B9FFBC500D2DF2C /* AppDelegate.h */,
 				2C8544391B9FFBC500D2DF2C /* AppDelegate.m */,
-				2C85443B1B9FFBC500D2DF2C /* PlanListViewController.h */,
-				2C85443C1B9FFBC500D2DF2C /* PlanListViewController.m */,
 				2C85443E1B9FFBC500D2DF2C /* Main.storyboard */,
 				2C8544411B9FFBC500D2DF2C /* Images.xcassets */,
 				2C8544431B9FFBC500D2DF2C /* LaunchScreen.xib */,
@@ -127,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				2C8544611BA0465100D2DF2C /* PlanList */,
+				2C8544791BA115E500D2DF2C /* PlanDetail */,
+				2C8544781BA1158500D2DF2C /* SpotDetail */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -134,10 +147,32 @@
 		2C8544611BA0465100D2DF2C /* PlanList */ = {
 			isa = PBXGroup;
 			children = (
+				2C85443B1B9FFBC500D2DF2C /* PlanListViewController.h */,
+				2C85443C1B9FFBC500D2DF2C /* PlanListViewController.m */,
 				2C8544621BA0466C00D2DF2C /* PlanListTableViewCell.h */,
 				2C8544631BA0466C00D2DF2C /* PlanListTableViewCell.m */,
 			);
 			name = PlanList;
+			sourceTree = "<group>";
+		};
+		2C8544781BA1158500D2DF2C /* SpotDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C8544751BA1153800D2DF2C /* SpotDeatilViewController.h */,
+				2C8544761BA1157100D2DF2C /* SpotDetailViewController.m */,
+			);
+			name = SpotDetail;
+			sourceTree = "<group>";
+		};
+		2C8544791BA115E500D2DF2C /* PlanDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2C85446E1BA0501600D2DF2C /* PlanDetailViewController.h */,
+				2C85446C1BA04FEA00D2DF2C /* PlanDetailViewController.m */,
+				2C8544701BA0528100D2DF2C /* PlanDetailTableViewCell.h */,
+				2C8544711BA052A200D2DF2C /* PlanDetailTableViewCell.m */,
+			);
+			name = PlanDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,9 +276,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8544641BA0466C00D2DF2C /* PlanListTableViewCell.m in Sources */,
+				2C8544771BA1157100D2DF2C /* SpotDetailViewController.m in Sources */,
 				2C85443D1B9FFBC500D2DF2C /* PlanListViewController.m in Sources */,
+				2C85446D1BA04FEA00D2DF2C /* PlanDetailViewController.m in Sources */,
 				2C85443A1B9FFBC500D2DF2C /* AppDelegate.m in Sources */,
 				2C8544371B9FFBC500D2DF2C /* main.m in Sources */,
+				2C8544721BA052A200D2DF2C /* PlanDetailTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
