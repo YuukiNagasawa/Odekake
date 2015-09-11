@@ -7,6 +7,10 @@
 //
 
 #import "SpotDetailViewController.h"
+#import "PlanDetailViewController.h"
+#import "PlanDetailTableViewCell.h"
+#import "SpotDetailService.h"
+#import "Constants.h"
 
 @interface SpotDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *spotImg;
@@ -20,31 +24,37 @@
 
 -(void)setData:(NSDictionary *)data{
     _spotCommentTextView.text=data[@"comment"];
-    
-    NSURL *myURL = [NSURL URLWithString:data[@"image_url"]];
+    NSString *url = [NSString stringWithFormat:@"%@%@", kImageDomain, data[@"imageurl"]];
+    NSURL *myURL = [NSURL URLWithString:url];
     NSData *myData = [NSData dataWithContentsOfURL:myURL];
     UIImage *myImage = [UIImage imageWithData:myData];
     _spotImg.image = myImage;
+    
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.1, 0.1);
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake([data[@"latitude"]floatValue], [data[@"longitude"]floatValue]);
+    [_spotMapView setRegion:MKCoordinateRegionMake(center, span) animated:NO];
+    
+    //Pinの設定
+    MKPointAnnotation* tt = [[MKPointAnnotation alloc] init];
+    tt.coordinate = center;
+    [_spotMapView addAnnotations:@[tt]];
 }
 
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    _spotDetail =@{@"image_url":@"http://fujifilm.jp/personal/digitalcamera/x/fujinon_lens_xf16mmf14_r_wr/sample_images/img/index/ff_xf16mmf14_r_wr_004.JPG",@"comment":@"やっほーい",@"latitude":@"9084838",@"longitude":@"87862734"};
+    NSLog(@"%ld",(long)_spotId);
+    
+    _spotDetail =[SpotDetailService loadData:_spotId];
+    
+    
     
     
     //_spotImg.image=[ ];
     
-    [self setData:_spotDetail];
+    [self setData:_spotDetail[@"Spot"]];
     
-    MKCoordinateSpan span = MKCoordinateSpanMake(0.1, 0.1);
-    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(35.682736, 139.779722);
-    [_spotMapView setRegion:MKCoordinateRegionMake(center, span) animated:NO];
     
-    //Pinの設定
-    MKPointAnnotation* tt = [[MKPointAnnotation alloc] init];
-    tt.coordinate = CLLocationCoordinate2DMake(35.655333, 139.748611);
-    [_spotMapView addAnnotations:@[tt]];
 }
 
 

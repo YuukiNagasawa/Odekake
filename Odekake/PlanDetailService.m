@@ -8,7 +8,8 @@
 
 #import "PlanDetailService.h"
 #import "Constants.h"
-#define kPlanDetailJsonPath @"spot_name.json"
+#define kPlanDetailJsonPath @"/spot_name.json"
+
 
 
 @interface PlanDetailService ()
@@ -17,9 +18,9 @@
 
 @implementation PlanDetailService
 
-+(NSDictionary*)loadData{
++(NSDictionary*)loadData:(NSInteger)planId{
     
-    NSString*url = [NSString stringWithFormat:@"%@%@",kAPIDomain,kPlanDetailJsonPath];
+    NSString*url = [NSString stringWithFormat:@"%@%@?id=%ld",kAPIDomain,kPlanDetailJsonPath,planId];
     
     NSURLRequest*request=[NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     
@@ -27,7 +28,7 @@
     
     NSDictionary*dictionary=[NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingAllowFragments error:nil];
     
-    return dictionary;
+    return dictionary[@"posts"];
     
 }
 

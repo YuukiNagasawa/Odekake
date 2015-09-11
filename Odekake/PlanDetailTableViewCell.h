@@ -13,6 +13,8 @@
 
 @interface PlanDetailTableViewCell : UITableViewCell
 
+@property(nonatomic)NSInteger spotId;
+
 -(void)setData:(NSDictionary*)data;
 
 @end

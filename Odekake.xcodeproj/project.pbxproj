@@ -28,6 +28,7 @@
 		2C8544901BA18F1900D2DF2C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C85448F1BA18F1900D2DF2C /* CoreLocation.framework */; };
 		2C8544931BA2589500D2DF2C /* PlanListService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544921BA2589500D2DF2C /* PlanListService.m */; };
 		2C8544971BA263A900D2DF2C /* PlanDetailService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544961BA263A900D2DF2C /* PlanDetailService.m */; };
+		2C85449A1BA290E600D2DF2C /* SpotDetailService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544991BA290E600D2DF2C /* SpotDetailService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		2C8544941BA25A6100D2DF2C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		2C8544951BA2638200D2DF2C /* PlanDetailService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanDetailService.h; sourceTree = "<group>"; };
 		2C8544961BA263A900D2DF2C /* PlanDetailService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanDetailService.m; sourceTree = "<group>"; };
+		2C8544981BA290B400D2DF2C /* SpotDetailService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotDetailService.h; sourceTree = "<group>"; };
+		2C8544991BA290E600D2DF2C /* SpotDetailService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotDetailService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +199,8 @@
 			children = (
 				2C8544751BA1153800D2DF2C /* SpotDetailViewController.h */,
 				2C8544761BA1157100D2DF2C /* SpotDetailViewController.m */,
+				2C8544981BA290B400D2DF2C /* SpotDetailService.h */,
+				2C8544991BA290E600D2DF2C /* SpotDetailService.m */,
 			);
 			name = SpotDetail;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				2C8544971BA263A900D2DF2C /* PlanDetailService.m in Sources */,
 				2C85448D1BA145C300D2DF2C /* SearchViewController.m in Sources */,
 				2C8544721BA052A200D2DF2C /* PlanDetailTableViewCell.m in Sources */,
+				2C85449A1BA290E600D2DF2C /* SpotDetailService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

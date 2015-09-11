@@ -19,9 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet MKMapView *spotMapView;
 @property (readwrite, nonatomic) CLLocationCoordinate2D coordinate;
-
-//double latitude;
-//double longitude;
+@property(nonatomic)NSInteger spotId;
 
 -(void)setData:(NSDictionary*)data;
 

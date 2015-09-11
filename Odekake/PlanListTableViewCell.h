@@ -13,6 +13,8 @@
 
 @interface PlanListTableViewCell : UITableViewCell
 
+@property(nonatomic)NSInteger planId;
+
 -(void)setData:(NSDictionary *)data;
 
 @end

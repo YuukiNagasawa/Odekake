@@ -15,6 +15,8 @@
     UITableViewDelegate,UITableViewDataSource
 >
 
+@property(nonatomic)NSInteger planId;
+
 @end
 
 

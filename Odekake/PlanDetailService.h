@@ -13,7 +13,7 @@
 
 @interface PlanDetailService : UIViewController
 
-+(NSDictionary*)loadData;
++(NSDictionary*)loadData:(NSInteger)planId;
 
 @end
 

@@ -11,6 +11,7 @@
 #import "PlanListTableViewCell.h"
 #import "SearchViewController.h"
 #import "PlanListService.h"
+#import "PlanDetailViewController.h"
 @interface PlanListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic)NSArray *planList;
@@ -42,6 +43,14 @@
         SearchViewController * viewController =segue.destinationViewController;
         
         viewController.delegate=self;
+    }
+    
+    if([segue.identifier isEqual:@"onSelectPlanSegue"]){
+        
+        PlanDetailViewController*viewController = segue.destinationViewController;
+        PlanListTableViewCell *cell = sender;
+        viewController.planId  = cell.planId;
+        
     }
 }
 

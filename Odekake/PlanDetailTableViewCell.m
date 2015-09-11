@@ -7,6 +7,7 @@
 //
 
 #import "PlanDetailTableViewCell.h"
+#import "Constants.h"
 
 @interface PlanDetailTableViewCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *spotNameImg;
@@ -20,8 +21,10 @@
 
 -(void)setData:(NSDictionary *)data{
     _planDetailLabel.text=data[@"name"];
+    _spotId = [data[@"id"] integerValue];
     
-    NSURL *myURL = [NSURL URLWithString:data[@"img_url"]];
+    NSString *url = [NSString stringWithFormat:@"%@%@", kImageDomain, data[@"imageurl"]];
+    NSURL *myURL = [NSURL URLWithString:url];
     NSData *myData = [NSData dataWithContentsOfURL:myURL];
     UIImage *myImage = [UIImage imageWithData:myData];
     _spotImg.image = myImage;

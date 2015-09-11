@@ -11,7 +11,6 @@
 @interface PlanListTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *planName;
 
-@property(nonatomic)NSInteger planId;
 @end
 
 @implementation PlanListTableViewCell

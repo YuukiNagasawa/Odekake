@@ -11,6 +11,7 @@
 
 //APIのURLの共通部分
 #define kAPIDomain @"http://192.168.11.150/odekake/apis"
+#define kImageDomain @"http://192.168.11.150/odekake"
 
 
 #endif
