@@ -10,7 +10,7 @@
 #import "PlanListViewController.h"
 #import "PlanListTableViewCell.h"
 #import "SearchViewController.h"
-
+#import "PlanListService.h"
 @interface PlanListViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic)NSArray *planList;
@@ -27,12 +27,7 @@
     
     
     
-    _planList = @[
-                  @{@"name":@"楽しいプラン",@"image_url":@"https://pbs.twimg.com/profile_images/378800000220029324/fe66faeca20115da8566e51d83447ead_400x400.jpeg"},
-                  @{@"name":@"悲しいプラン",@"image_url":@"http://nekogazou.com/wp-content/uploads/2013/07/0142.jpg"},
-                  @{@"name":@"怖いプラン"},
-                  @{@"name":@"つらいプラン"}
-                  ];
+    _planList = [PlanListService loadData];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -59,7 +54,7 @@
    
     PlanListTableViewCell * cell =[_tableView dequeueReusableCellWithIdentifier:@"PlanListTableViewCell" forIndexPath:indexPath];
     
-    [cell setData:_planList[indexPath.row]];
+    [cell setData:_planList[indexPath.row][@"Plan"]];
     
     return cell;
 }

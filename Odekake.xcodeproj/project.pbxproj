@@ -26,6 +26,8 @@
 		2C8544891BA1441300D2DF2C /* cat1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C8544881BA1441300D2DF2C /* cat1.jpg */; };
 		2C85448D1BA145C300D2DF2C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85448C1BA145C300D2DF2C /* SearchViewController.m */; };
 		2C8544901BA18F1900D2DF2C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C85448F1BA18F1900D2DF2C /* CoreLocation.framework */; };
+		2C8544931BA2589500D2DF2C /* PlanListService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544921BA2589500D2DF2C /* PlanListService.m */; };
+		2C8544971BA263A900D2DF2C /* PlanDetailService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8544961BA263A900D2DF2C /* PlanDetailService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,11 @@
 		2C85448C1BA145C300D2DF2C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		2C85448E1BA147AC00D2DF2C /* SearchProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchProtocol.h; sourceTree = "<group>"; };
 		2C85448F1BA18F1900D2DF2C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2C8544911BA2587E00D2DF2C /* PlanListService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanListService.h; sourceTree = "<group>"; };
+		2C8544921BA2589500D2DF2C /* PlanListService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanListService.m; sourceTree = "<group>"; };
+		2C8544941BA25A6100D2DF2C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		2C8544951BA2638200D2DF2C /* PlanDetailService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanDetailService.h; sourceTree = "<group>"; };
+		2C8544961BA263A900D2DF2C /* PlanDetailService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanDetailService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +129,7 @@
 				2C8544601BA0463D00D2DF2C /* Views */,
 				2C8544381B9FFBC500D2DF2C /* AppDelegate.h */,
 				2C8544391B9FFBC500D2DF2C /* AppDelegate.m */,
+				2C8544941BA25A6100D2DF2C /* Constants.h */,
 				2C85443E1B9FFBC500D2DF2C /* Main.storyboard */,
 				2C8544411B9FFBC500D2DF2C /* Images.xcassets */,
 				2C8544431B9FFBC500D2DF2C /* LaunchScreen.xib */,
@@ -177,6 +185,8 @@
 				2C85443C1B9FFBC500D2DF2C /* PlanListViewController.m */,
 				2C8544621BA0466C00D2DF2C /* PlanListTableViewCell.h */,
 				2C8544631BA0466C00D2DF2C /* PlanListTableViewCell.m */,
+				2C8544911BA2587E00D2DF2C /* PlanListService.h */,
+				2C8544921BA2589500D2DF2C /* PlanListService.m */,
 			);
 			name = PlanList;
 			sourceTree = "<group>";
@@ -197,6 +207,8 @@
 				2C85446C1BA04FEA00D2DF2C /* PlanDetailViewController.m */,
 				2C8544701BA0528100D2DF2C /* PlanDetailTableViewCell.h */,
 				2C8544711BA052A200D2DF2C /* PlanDetailTableViewCell.m */,
+				2C8544951BA2638200D2DF2C /* PlanDetailService.h */,
+				2C8544961BA263A900D2DF2C /* PlanDetailService.m */,
 			);
 			name = PlanDetail;
 			sourceTree = "<group>";
@@ -343,7 +355,9 @@
 				2C85446D1BA04FEA00D2DF2C /* PlanDetailViewController.m in Sources */,
 				2C8544811BA1203900D2DF2C /* FavoriteListTableViewCell.m in Sources */,
 				2C85443A1B9FFBC500D2DF2C /* AppDelegate.m in Sources */,
+				2C8544931BA2589500D2DF2C /* PlanListService.m in Sources */,
 				2C8544371B9FFBC500D2DF2C /* main.m in Sources */,
+				2C8544971BA263A900D2DF2C /* PlanDetailService.m in Sources */,
 				2C85448D1BA145C300D2DF2C /* SearchViewController.m in Sources */,
 				2C8544721BA052A200D2DF2C /* PlanDetailTableViewCell.m in Sources */,
 			);
@@ -474,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Odekake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -484,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Odekake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

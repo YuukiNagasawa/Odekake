@@ -11,12 +11,14 @@
 @interface PlanListTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *planName;
 
+@property(nonatomic)NSInteger planId;
 @end
 
 @implementation PlanListTableViewCell
 
 -(void)setData:(NSDictionary *)data{
     _planName.text=data[@"name"];
+    _planId=[data[@"id"] integerValue];
 }
 
 
